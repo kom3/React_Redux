@@ -4,9 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// below imports are required to configure redux with react
+import { createStore, applyMiddleware, compose } from 'redux'
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
+
+import redux_with_combined_reducers from './redux_management/reducers/allreducerscombiner'
+
+const composeEnhancers =
+  typeof window === 'object' &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+      // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
+    }) : compose;
+
+const redux_global_store = createStore(redux_with_combined_reducers, composeEnhancers(applyMiddleware(thunk)))
+
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={redux_global_store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
