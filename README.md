@@ -1,3 +1,20 @@
+## Basic modules needed in react + redux project:
+
+```
+
+1. react-router-dom   | import { BrowserRouter as Router, HashRouter, Switch, Route, BrowserRouter } from 'react-router-dom'
+
+2. redux  | import {combineReducers} from 'redux' (in reducer_management/recuers.js), import { createStore, applyMiddleware, compose } from 'redux' (in app.js/index.js)
+
+3. react-redux | import { Provider } from 'react-redux'
+
+4. redux-thunk | import thunk from 'redux-thunk'
+
+
+```
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
