@@ -18,7 +18,7 @@ import thunk from 'redux-thunk'
 ```
 
 ## How to use?
-## 1. In Class Based Components:
+## 1. In Class Components:
 
 ```
 
@@ -64,6 +64,56 @@ const mapDispatchToProps = (dispatch) => {
 
 
 export default connect(mapStoreToProps, mapDispatchToProps)(Parent)
+
+```
+
+## 1. In Function Components:
+
+```
+import { useDispatch, useSelector } from 'react-redux'
+
+
+ASSIGNING DATA FROM REDUX STORE TO COMPONENT STATES':
+-------------------------------------------------------
+//Using 'useSelector' to get redux store
+const redux_store = useSelector(state => state)
+
+// Local states, (assigning data from redux-store states to local states)
+const [name, setName] = useState(redux_store.StateOne.name)
+const [age, setAge] = useState(redux_store.StateOne.age)
+const [address, setAddress] = useState(redux_store.StateTwo.address)
+
+
+
+DISPATCHING DATA FROM COMPONENET STATES'/COMPONENT TO REDUX STORE:
+--------------------------------------------------------------------
+//create a reference of DispatchRef, *** raises name conflicts if function name starts with use ex: 'useFunc' ***
+const DispatchRef = useDispatch()
+
+//dispatching name data to redux store state(StateOne) when name state changes
+useEffect(() => {
+    DispatchRef({
+        type: "SET_REDUCER_ONE",
+        payload: { name: name }
+    })
+}, [name])
+
+//dispatching age data to redux store state(StateOne) state when age state changes
+useEffect(() => {
+    DispatchRef({
+        type: "SET_REDUCER_ONE",
+        payload: { age: age }
+    })
+}, [age])
+
+//dispatching address data to redux store state(StateTwo) when address state changes
+useEffect(() => {
+    DispatchRef({
+        type: "SET_REDUCER_TWO",
+        payload: { address: address }
+    })
+}, [address])
+
 
 ```
 
