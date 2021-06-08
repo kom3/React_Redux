@@ -18,6 +18,9 @@ const composeEnhancers =
       // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
     }) : compose;
 
+//or in simply
+// composeEnhancers = compose
+
 const redux_global_store = createStore(redux_with_combined_reducers, composeEnhancers(applyMiddleware(thunk)))
 
 
