@@ -10,10 +10,12 @@ import {combineReducers} from 'redux' (in redux_management/combinereducers.js)
 import { createStore, applyMiddleware, compose } from 'redux' (in app.js/index.js)
 
 3. react-redux
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux'  (in app.js/index.js)
+import { connect } from 'react-redux' (in class components)
+import { useDispatch, useSelector } from 'react-redux' (in function components)
 
 4. redux-thunk
-import thunk from 'redux-thunk'
+import thunk from 'redux-thunk' (in app.js/index.js)
 
 ```
 
