@@ -15,7 +15,13 @@ import { Provider } from 'react-redux'
 4. redux-thunk
 import thunk from 'redux-thunk'
 
-## In Class Component:
+```
+
+## How to use?
+## 1. In Class Based Components:
+
+```
+
 // import connect
 // import actions (or we can directly import reducers and deal with it as well)
 
@@ -58,9 +64,6 @@ const mapDispatchToProps = (dispatch) => {
 
 
 export default connect(mapStoreToProps, mapDispatchToProps)(Parent)
-
-
-
 
 ```
 
