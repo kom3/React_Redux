@@ -2,13 +2,18 @@
 
 ```
 
-1. react-router-dom   | import { BrowserRouter as Router, HashRouter, Switch, Route, BrowserRouter } from 'react-router-dom'
+1. react-router-dom
+import { BrowserRouter as Router, HashRouter, Switch, Route, BrowserRouter } from 'react-router-dom'
 
-2. redux  | import {combineReducers} from 'redux' (in redux_management/combinereducers.js), import { createStore, applyMiddleware, compose } from 'redux' (in app.js/index.js)
+2. redux
+import {combineReducers} from 'redux' (in redux_management/combinereducers.js)
+import { createStore, applyMiddleware, compose } from 'redux' (in app.js/index.js)
 
-3. react-redux | import { Provider } from 'react-redux'
+3. react-redux
+import { Provider } from 'react-redux'
 
-4. redux-thunk | import thunk from 'redux-thunk'
+4. redux-thunk
+import thunk from 'redux-thunk'
 
 
 ```
