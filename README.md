@@ -69,7 +69,7 @@ export default connect(mapStoreToProps, mapDispatchToProps)(Parent)
 
 ```
 
-## 1. In Function Components:
+## 2. In Function Components:
 
 ```
 import { useDispatch, useSelector } from 'react-redux'
