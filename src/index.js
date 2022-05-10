@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// importing Provider and combined reducer(global store) from reduxConfig.js
+// importing Provider and a global store from config/reduxConfig.js
 
 import { Provider, redux_global_store } from "./config/reduxConfig"
 
